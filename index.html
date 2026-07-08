@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cajunnaise® — Cajun Mayonnaise. The name the category is missing.</title>
+<meta name="description" content="Cajunnaise is a registered Australian trade mark (Class 30) for Cajun mayonnaise — available for licensing to QSR and food manufacturing partners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cayenne:#A62B14;
+    --cayenne-deep:#7E1F0D;
+    --cream:#F6ECD9;
+    --cream-dim:#E9DCC2;
+    --char:#1C120C;
+    --spice-gold:#D9A441;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation:none!important;transition:none!important;}
+  }
+  body{
+    font-family:'Libre Franklin',system-ui,sans-serif;
+    background:var(--char);
+    color:var(--cream);
+    line-height:1.6;
+  }
+
+  /* ---------- HERO: the label ---------- */
+  .hero{
+    background:var(--cayenne);
+    background-image:radial-gradient(ellipse at 50% -20%, #C0402A 0%, var(--cayenne) 55%, var(--cayenne-deep) 100%);
+    padding:clamp(2rem,6vw,4.5rem) 1.25rem clamp(2.5rem,7vw,5rem);
+    display:flex;
+    justify-content:center;
+  }
+  .label{
+    width:min(680px,100%);
+    background:var(--cream);
+    color:var(--char);
+    border:3px solid var(--char);
+    box-shadow:0 0 0 6px var(--cream), 0 0 0 9px var(--char), 0 18px 40px rgba(0,0,0,.35);
+    padding:clamp(1.75rem,5vw,3rem) clamp(1.25rem,5vw,3rem) clamp(1.5rem,4vw,2.5rem);
+    text-align:center;
+  }
+  .label-rule{
+    display:flex;align-items:center;gap:.75rem;
+    color:var(--cayenne);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+  }
+  .label-rule::before,.label-rule::after{
+    content:"";flex:1;height:1px;background:currentColor;opacity:.6;
+  }
+  .label h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(3rem,11vw,6.5rem);
+    letter-spacing:.02em;
+    text-transform:uppercase;
+    line-height:1;
+    margin:.35em 0 .12em;
+    color:var(--char);
+  }
+  .label h1 sup{
+    font-size:.28em;vertical-align:super;letter-spacing:0;
+    color:var(--cayenne);
+  }
+  .label .strapline{
+    font-size:clamp(1rem,2.6vw,1.3rem);
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--cayenne);
+    margin-bottom:1.1rem;
+  }
+  .label .blurb{
+    max-width:44ch;margin:0 auto 1.4rem;
+    font-size:clamp(.95rem,2.2vw,1.05rem);
+    color:#3A2A1E;
+  }
+  .reg-line{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+    color:#6B5138;
+    border-top:1px solid #C9B692;
+    padding-top: .9rem;
+  }
+
+  /* ---------- BODY SECTIONS ---------- */
+  main{max-width:680px;margin:0 auto;padding:0 1.25rem;}
+  section{padding:clamp(2.25rem,6vw,3.5rem) 0;border-bottom:1px solid #33241A;}
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--spice-gold);
+    margin-bottom:.9rem;
+  }
+  h2{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(1.5rem,4.5vw,2.1rem);
+    letter-spacing:.03em;text-transform:uppercase;
+    line-height:1.15;
+    margin-bottom:1rem;
+    color:var(--cream);
+  }
+  p{color:var(--cream-dim);max-width:58ch;}
+  p + p{margin-top:1rem;}
+  strong{color:var(--cream);font-weight:600;}
+
+  /* proof list */
+  .proof{list-style:none;margin-top:1.25rem;}
+  .proof li{
+    display:flex;gap:.9rem;align-items:baseline;
+    padding:.8rem 0;border-top:1px solid #33241A;
+    color:var(--cream-dim);
+  }
+  .proof li:last-child{border-bottom:1px solid #33241A;}
+  .proof .tick{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--cayenne);
+    font-weight:500;
+    flex:0 0 auto;
+  }
+  .proof b{color:var(--cream);font-weight:600;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    text-align:center;
+    padding-bottom:clamp(3rem,8vw,4.5rem);
+  }
+  .btn{
+    display:inline-block;
+    margin-top:1.4rem;
+    background:var(--cayenne);
+    color:var(--cream);
+    font-family:'Anton',sans-serif;
+    font-size:1.05rem;
+    letter-spacing:.08em;text-transform:uppercase;
+    text-decoration:none;
+    padding:.9rem 2.2rem;
+    border:2px solid var(--cream);
+    box-shadow:4px 4px 0 var(--cream);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--cream);}
+  .btn:focus-visible{outline:3px solid var(--spice-gold);outline-offset:3px;}
+
+  footer{
+    background:#120B07;
+    text-align:center;
+    padding:1.5rem 1.25rem 2rem;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;
+    color:#6E5A47;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="label">
+    <div class="label-rule">Louisiana heat &middot; Australian made</div>
+    <h1>Cajunnaise<sup>&reg;</sup></h1>
+    <div class="strapline">Cajun Mayonnaise</div>
+    <p class="blurb">Smoked paprika, cayenne and garlic folded through a rich, creamy mayonnaise. One word that says the whole thing.</p>
+    <div class="reg-line">Registered Trade Mark &middot; Australia &middot; Class 30 &middot; Registered to 2036</div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="eyebrow">The opportunity</div>
+    <h2>The category exists. The name didn't.</h2>
+    <p>Cajun-spiced mayo is already on menus and in squeeze bottles across the country — sold as "spicy mayo", "Cajun aioli", "chipotle-style sauce". Descriptive names that no one owns and no one remembers.</p>
+    <p><strong>Cajunnaise</strong> is the word the category was always going to arrive at: instantly understood, impossible to unhear, and legally protected in Australia.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The asset</div>
+    <h2>What's on the table</h2>
+    <ul class="proof">
+      <li><span class="tick">&#10003;</span><span><b>Registered Australian trade mark</b> — Class 30 (condiments &amp; sauces), registration maintained through 2036.</span></li>
+      <li><span class="tick">&#10003;</span><span><b>Cajunnaise.com</b> — the exact-match global domain.</span></li>
+      <li><span class="tick">&#10003;</span><span><b>Developed recipe</b> — a proven formulation by an ex-commercial food manufacturer, ready for scale-up or adaptation to a partner's kitchen.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="eyebrow">The model</div>
+    <h2>Built to license, not to compete</h2>
+    <p>Cajunnaise isn't seeking shelf space against anyone — it's a name and identity available to a partner who already has the kitchens, factories or menus to put it to work. Licensing, white-label manufacture, or outright brand partnership: the structure is open.</p>
+  </section>
+
+  <section class="contact">
+    <div class="eyebrow">Talk</div>
+    <h2>Put the name on your menu</h2>
+    <p style="margin:0 auto;">One conversation costs nothing. Serious enquiries from QSR, foodservice and manufacturing partners welcome.</p>
+    <a class="btn" href="mailto:markhlfoods@gmail.com?subject=Cajunnaise%20licensing%20enquiry">Start the conversation</a>
+  </section>
+</main>
+
+<footer>
+  Cajunnaise&reg; is a registered trade mark &middot; Rosmin Pty Ltd ACN 111 280 589 &middot; Australia
+</footer>
+
+</body>
+</html>
